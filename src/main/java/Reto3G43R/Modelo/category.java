@@ -17,9 +17,16 @@ public class category implements Serializable{
     private Integer id;
     private String name;
     private String description;
+    private library lib;
     
     
     
+    public library getLib() {
+        return lib;
+    }
+    public void setLib(library lib) {
+        this.lib = lib;
+    }
     public Integer getId() {
         return id;
     }
