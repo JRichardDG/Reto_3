@@ -18,15 +18,15 @@ public class CatService {
         return catRepository.getAll();
     }
        
-    public Optional<category> getLibrary(int id) {
-        return catRepository.getLibrary(id);
+    public Optional<category> getLibrary(int Idcategoria) {
+        return catRepository.getLibrary(Idcategoria);
     }
 
     public category save(category p) {
-        if (p.getId()==null) {
+        if (p.getIdcategoria()==null) {
             return  catRepository.save(p);
         } else {
-            Optional<category> paux=catRepository.getLibrary(p.getId());
+            Optional<category> paux=catRepository.getLibrary(p.getIdcategoria());
             if (paux.isEmpty()) {
                 return  catRepository.save(p);
             } else {

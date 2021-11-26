@@ -18,8 +18,8 @@ public class CatRepository {
         return (List<category>) catCrudRepsitory.findAll();
     }
 
-   public Optional<category> getLibrary(int id) {
-       return catCrudRepsitory.findById(id);
+   public Optional<category> getLibrary(int Idcategoria) {
+       return catCrudRepsitory.findById(Idcategoria);
    }
 
    public category save(category p) {

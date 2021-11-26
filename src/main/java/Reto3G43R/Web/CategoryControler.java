@@ -30,8 +30,8 @@ public class CategoryControler {
     }
 
     @GetMapping("/{id}")
-    public Optional<category> FindCategoryById(@PathVariable("id")int id) {
-        return catService.getLibrary(id);
+    public Optional<category> FindCategoryById(@PathVariable("id")int Idcategoria) {
+        return catService.getLibrary(Idcategoria);
     }
 
 

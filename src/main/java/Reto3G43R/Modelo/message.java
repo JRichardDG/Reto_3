@@ -6,6 +6,7 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.OneToOne;
 import javax.persistence.Table;
 
 @Entity
@@ -16,7 +17,9 @@ public class message implements Serializable{
     @GeneratedValue  ( strategy = GenerationType.IDENTITY)
     private Integer id;
     private String messagetext;
-    private int category;
+    @OneToOne
+    private int clients;
+    @OneToOne
     private int library;
     
     
@@ -26,6 +29,12 @@ public class message implements Serializable{
     }
     public void setLibrary(int library) {
         this.library = library;
+    }
+    public int getClients() {
+        return clients;
+    }
+    public void setClients(int clients) {
+        this.clients = clients;
     }
     public Integer getId() {
         return id;
@@ -39,13 +48,6 @@ public class message implements Serializable{
     public void setMessagetext(String messagetext) {
         this.messagetext = messagetext;
     }
-    public int getCategory() {
-        return category;
-    }
-    public void setCategory(int category) {
-        this.category = category;
-    }
-    
 
     
 }
