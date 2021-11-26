@@ -1,6 +1,7 @@
 package Reto3G43R.Modelo;
 
 import java.io.Serializable;
+import java.util.List;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -21,7 +22,7 @@ public class library implements Serializable {
     private Integer category;
     private String name;
     private String description;
-    
+    private List <clients> ListadeClientes;
     
     
     public Integer getId() {
@@ -47,6 +48,12 @@ public class library implements Serializable {
     }
     public void setCategory(Integer category) {
         this.category = category;
+    }
+    public List<clients> getListadeClientes() {
+        return ListadeClientes;
+    }
+    public void setListadeClientes(List<clients> listadeClientes) {
+        ListadeClientes = listadeClientes;
     }
     public String getName() {
         return name;

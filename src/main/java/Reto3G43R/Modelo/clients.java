@@ -19,9 +19,15 @@ public class clients implements Serializable {
     private String email;
     private String password;
     private Integer age;
+    private library lib;
     
     
-    
+    public library getLib() {
+        return lib;
+    }
+    public void setLib(library lib) {
+        this.lib = lib;
+    }
     public Integer getId() {
         return id;
     }
