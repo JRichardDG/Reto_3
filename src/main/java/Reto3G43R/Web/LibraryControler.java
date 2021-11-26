@@ -27,19 +27,19 @@ public class LibraryControler {
     private LibService libService;
 
     @GetMapping("/all")
-    public List<library> findAllProducts(){
+    public List<library> findAllLibraries(){
         return libService.getAll();
     }
 
     @GetMapping("/{id}")
-    public Optional<library> FindById(@PathVariable("id")int id) {
+    public Optional<library> FindLibById(@PathVariable("id")int id) {
         return libService.getLibrary(id);
     }
 
 
     @PostMapping("/save")
     @ResponseStatus(HttpStatus.CREATED)
-    public library save(@RequestBody library p) {
+    public library saveLibrary(@RequestBody library p) {
         return libService.save(p);
     }
 }
